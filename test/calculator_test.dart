@@ -38,7 +38,7 @@ test('Addition: Given two negative numbers, When add method is called, Then the 
 
 
   group('Multiplication', () {
-    test('iven Calculator class, when multiplication is called and both numbers are positive, then output positive number for multiplying positive numbers', () {
+    test('Given Calculator class, when multiplication is called and both numbers are positive, then output positive number for multiplying positive numbers', () {
       expect(calculatorRepository.multplication(2, 3), equals(6));
     });
 
