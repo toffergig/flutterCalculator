@@ -64,9 +64,32 @@ test('Addition: Given two negative numbers, When add method is called, Then the 
       expect(calculatorRepository.multplication(1, 1), equals(1));
     });
 
+
     test('Given Calculator class, when multiplication is called and there is a decimal number, then output correct product for multiplying floating-point numbers', () {
       expect(calculatorRepository.multplication(2.5, 4), equals(10));
       expect(calculatorRepository.multplication(4, 2.5), equals(10));
     });
   });
+
+
+  group('Division', () {  test('Given calculator class is instantiated, when division is called, then it should divide two numbers correctly', () {
+     
+      double dividend = 10;
+      double divisor = 2;
+
+      double result = calculatorRepository.division(dividend, divisor);
+
+      expect(result, equals(5));
+    });
+
+    test('Given calculator class is instantiated, when division is called, then it should divide two numbers should throw ArgumentError', () {
+
+      double dividend = 10;
+      double divisor = 0;
+
+      expect(() => calculatorRepository.division(dividend, divisor),throwsException);
+    }); });
+
+ 
 }
+
